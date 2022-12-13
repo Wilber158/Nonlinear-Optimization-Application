@@ -1,4 +1,4 @@
-function [xk, y, i] = newtonsMethod(x, f, delta)
+function [xk, y, i] = newtonsMethod_W(x, f, delta)
 
 a = 0.3943;
 %turning 
