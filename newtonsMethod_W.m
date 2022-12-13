@@ -1,5 +1,6 @@
 function [xk, y, i] = newtonsMethod_W(x, f, delta)
 
+f = sym(f);
 a = 0.3943;
 %turning 
 fprime1 = diff(f);
