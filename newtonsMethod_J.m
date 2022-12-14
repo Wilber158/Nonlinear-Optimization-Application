@@ -1,5 +1,6 @@
 function [x,z,i] = newtonsMethod_J(x0,f,error)
 
+f = sym(f);
 alpha=0.3943;
 gus1= diff(f);
 gus1 = matlabFunction(gus1);
