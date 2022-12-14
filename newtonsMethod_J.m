@@ -1,4 +1,4 @@
-function [x,z,i] = newtonsMethod_J(x0,f,error)
+function [x,y,i] = newtonsMethod_J(x0,f,error)
 
 f = sym(f);
 alpha=0.3943;
@@ -13,9 +13,9 @@ while(abs(xnext-x0) > error)
     x0 = xnext;
     xnext = x0 - (alpha * (gus1(x0)/gus2(x0)));
 end
-y=matlabFunction(f);
+f=matlabFunction(f);
 % fprintf('Point found at the point:[ %g , %g ] \n',xnext,y(x0));
 % fprintf('iterations: %d\n',iterations);
 x=xnext
-z=y(x0)
+y=f(xnext)
 i=iterations
