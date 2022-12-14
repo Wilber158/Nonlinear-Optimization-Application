@@ -1,5 +1,6 @@
 function [x,z,i] = newtonsMethod_J(x0,f,error)
 
+f = sym(f);
 alpha=0.3943;
 gus1= diff(f);
 gus1 = matlabFunction(gus1);
@@ -15,6 +16,6 @@ end
 y=matlabFunction(f);
 % fprintf('Point found at the point:[ %g , %g ] \n',xnext,y(x0));
 % fprintf('iterations: %d\n',iterations);
-x=x1
+x=xnext
 z=y(x0)
 i=iterations
